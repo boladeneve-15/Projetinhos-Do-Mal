@@ -9,22 +9,16 @@
 <body>
 
   <div id="danilson"> 
-      <img id="imagem-dinamica" onclick="nascer()" class="calse" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDvcSvrL9rs4ANB2dVQq_6ZysHMu1Yu4nQw&s" alt="Imagem Inicial">
+    <input type="checkbox" id="gatilho-giro">
+<label for="gatilho-giro" id="danilson">
+  <img id="imagem-dinamica" onclick="nascer()" class="calse" src="raro.webp" alt="Imagem Inicial">
+</label>
   </div>
   
 </body>
 <script>
   function nascer() { 
-    const img = document.getElementById('imagem-dinamica');
     
-    // 1. Aplica a animação de sumir na imagem atual
-    img.classList.add('apagar');
-    
-    // 2. Espera a animação de sumir terminar (400ms) para trocar a imagem e fazê-la surgir
-    setTimeout(() => {
-        img.src = "danilo EM T POSE.png";
-        img.classList.remove('apagar'); // Remove o 'apagar' para a nova imagem aparecer
-    }, 400);
   }
 </script>
 </html>
