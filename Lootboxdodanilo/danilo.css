@@ -1,0 +1,49 @@
+ body {
+        margin: 0;                
+        display: flex;
+        align-items: center;      
+        justify-content: center;    
+        height: 100vh;            
+        background-color: #ffffff;
+        overflow: hidden; /* Evita barras de rolagem desnecessárias no celular */
+    }
+
+    #danilson {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 500px; /* Garante que não estoure telas grandes */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .calse { 
+        mix-blend-mode: multiply;
+        filter: brightness(1.1) contrast(1.1);
+        transition: transform 0.3s ease, opacity 0.4s ease;
+        animation: surgir 2.5s forwards ease-out;
+        cursor: pointer;
+        
+        /* Ajustes cruciais para Mobile */
+        max-width: 100%; /* A imagem nunca fica maior que a tela do celular */
+        height: auto;    /* Mantém a proporção da imagem */
+        -webkit-tap-highlight-color: transparent; /* Remove o flash azul ao tocar no celular */
+    }
+
+    /* Efeito de toque/hover adaptado */
+    .calse:active, .calse:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes surgir {
+      from { opacity: 0.1; }
+      to { opacity: 1; }
+    }
+
+    /* Nova classe que será adicionada via JavaScript para sumir suavemente */
+    .apagar {
+        opacity: 0 !important;
+        pointer-events: none;
+        transform: scale(0.9) !important;
+    }
