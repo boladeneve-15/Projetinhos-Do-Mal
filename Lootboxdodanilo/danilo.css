@@ -12,6 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         width: 100%;
         max-width: 500px; 
         padding: 20px;
@@ -62,3 +63,17 @@
         pointer-events: none;
         transform: scale(0.9) !important;
     }
+.bolinhas {
+    flex-direction: row;
+   display: flex;
+    width: 45px;         
+    height: 40px;
+    background: linear-gradient(135deg, #06b60f, #033806);
+    border-radius: 100%;
+    box-shadow: 0 0 15px #06b60f, 0 0 30px rgba(6, 182, 15, 0.6);
+}
+.paidasbola{
+    flex-direction: row;
+   display: flex;
+   gap: 25px;
+}
